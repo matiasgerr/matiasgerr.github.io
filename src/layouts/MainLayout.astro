@@ -1,0 +1,74 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/TopBar.astro";
+import "@fontsource-variable/onest";
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const currentLang = Astro.currentLocale;
+---
+
+<!doctype html>
+<html lang={currentLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script>
+      const openMenu = document.getElementById("openMenu");
+      const closeMenu = document.getElementById("closeMenu");
+      const sidebar = document.getElementById("mobileSidebar");
+
+      openMenu.addEventListener("click", () => {
+        sidebar.classList.remove("hidden");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        sidebar.classList.add("hidden");
+      });
+
+      // Opcional: cerrar al hacer clic fuera del panel
+      sidebar.addEventListener("click", (e) => {
+        if (e.target === sidebar) {
+          sidebar.classList.add("hidden");
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <div
+      class="w-fit md:w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    >
+      <div class="w-full max-w-screen-xl mx-auto md:w-full">
+        <Header />
+      </div>
+      <main class="w-full mx-auto px-4">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: light dark;
+  }
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+</style>

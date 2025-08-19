@@ -1,0 +1,100 @@
+---
+import "../../styles/global.css";
+import Layout from "../../layouts/MainLayout.astro";
+import Badge from "../../components/badge.astro";
+import SocialsItems from "../../components/SocialsItems.astro";
+import { useTranslations } from "../../i18n/utils";
+import { languagesList } from "../../i18n/ui";
+import Experience from "../../components/Experience.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import BriefcaseIcon from "../../assets/icon/Briefcase.astro";
+/* funciones para la traducion de la pagina*/
+const currentLang = Astro.currentLocale;
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languagesList
+);
+---
+
+<Layout
+  title="Portfolio Web de Matias  |  Desarrollador Web y Diseño Web ..."
+  description="Matias Damian Delgado + Desarrollador Web y Diseño Web en Buenos Aires, Argentina. Conoce más sobre mi y mi trabajo."
+>
+  <section class="flex flex-row gap-8 p-10 my-7 rounded-2xl">
+    <!-- BOX 1: Presentación -->
+    <div
+      class="clip-custom w-1/2 flex flex-col items-start p-10 bg-[#59159d93] gap-3 text-white/70"
+    >
+      <img
+        src="https://lh3.googleusercontent.com/a/ACg8ocJEbYCjBwIzf0sHv4KIzKYRooko1yJtiqDAJTmGd_uNtqe98w7i=s288-c-no"
+        class="rounded-full size-28"
+        alt="my img"
+      />
+
+      <h1 class="text-3xl font-bold">
+        {translateLabels("name.title")}
+      </h1>
+
+      <a
+        href="https://www.linkedin.com/in/matiasdamiandelgado/"
+        class="flex justify-center items-center"
+      >
+        <Badge>{translateLabels("badge.text")}</Badge>
+      </a>
+
+      <p class="text-lg opacity-80">
+        {translateLabels("presentation.text")}{" "}
+        {translateLabels("presentation.country")}{" "}
+        {translateLabels("presentation.study")}{" "}
+        <span class="text-blue-100/90">
+          {translateLabels("presentation.degree")}
+        </span>
+      </p>
+
+      <SocialsItems />
+    </div>
+
+    <!-- BOX 2: Skills -->
+    <div
+      class="clip-medium w-1/2 flex flex-col gap-3 bg-[#59159d93] text-pretty text-white"
+    >
+      <h2 class="text-2xl font-semibold mb-4 text-center">Skills</h2>
+      <div class="flex flex-row justify-around items-center p-10">
+        <ul class="flex flex-col items-center gap-3">
+          <li class="bg-blue-800/40 w-48 rounded-xl px-3 py-2 text-center">
+            HTML
+          </li>
+          <li class="bg-blue-800/40 w-48 rounded-xl px-3 py-2 text-center">
+            CSS
+          </li>
+          <li class="bg-blue-800/40 w-48 rounded-xl px-3 py-2 text-center">
+            JavaScript
+          </li>
+        </ul>
+        <ul class="flex flex-col items-center gap-3">
+          <li class="bg-blue-800/40 w-48 rounded-xl px-3 py-2 text-center">
+            React
+          </li>
+          <li class="bg-blue-800/40 w-48 rounded-xl px-3 py-2 text-center">
+            Astro
+          </li>
+          <li class="bg-blue-800/40 w-48 rounded-xl px-3 py-2 text-center">
+            Tailwind
+          </li>
+        </ul>
+      </div>
+
+      <div class="w-full text-center h-32 bg-white/20">
+        <h2>Mi música 🎶</h2>
+        <!-- <SpotifyTopTracks client:load /> -->
+      </div>
+    </div>
+  </section>
+</Layout>
+<style>
+  .clip-custom {
+    clip-path: polygon(80% 0, 100% 53%, 90% 100%, 0 100%, 0 0);
+  }
+  .clip-medium {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 13% 53%);
+  }
+</style>

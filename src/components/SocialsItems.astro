@@ -1,0 +1,33 @@
+---
+import LinkedingIcon from "../assets/icon/Linkeding.astro";
+import SocialPillIcon from "../assets/icon/SocialPill.astro";
+import GithubIcon from "../assets/icon/Github.astro";
+import MailIcon from "../assets/icon/Mail.astro";
+import Whatsapp from "../assets/icon/Whatsapp.astro";
+---
+
+<nav
+  class="flex flex-wrap gap-4 mt-4 items-center justify-center sm:justify-around text-gray-400/60 px-4"
+>
+  <SocialPillIcon href="https://www.linkedin.com/in/matiasdamiandelgado/">
+    <LinkedingIcon class="size-6" />
+    <span class="text-sm">Linkedin</span>
+  </SocialPillIcon>
+
+  <SocialPillIcon href="https://github.com/MatiasDelgadoD">
+    <GithubIcon class="size-6" />
+    <span class="text-sm">Github</span>
+  </SocialPillIcon>
+
+  <SocialPillIcon href="mailto:matiasdelgadodjr@hotmail.es">
+    <MailIcon class="size-6" />
+    <span class="text-sm sm:text-sm break-all text-center">
+      Matiasdelgadodjr@hotmail.es
+    </span>
+  </SocialPillIcon>
+
+  <SocialPillIcon href="https://wa.me/+5491138578047">
+    <Whatsapp class="size-5" />
+    <span class="text-sm sm:text-sm">+54 901138578047</span>
+  </SocialPillIcon>
+</nav>

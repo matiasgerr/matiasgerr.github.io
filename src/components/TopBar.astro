@@ -1,0 +1,77 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { useTranslations } from "../i18n/utils";
+import { languagesList } from "../i18n/ui";
+import Lang from "./Lang.astro";
+const currentLang = Astro.currentLocale;
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languagesList
+);
+---
+
+<!-- CONTENEDOR HEADER -->
+<header
+  class="flex items-center justify-between md:justify-around py-2 px-8 bg-neutral-900 text-amber-50"
+>
+  <!-- LOGO O NOMBRE -->
+  <div class="text-lg font-semibold">{translateLabels("topbar.title")}</div>
+
+  <!-- BOTÓN HAMBURGUESA SOLO EN MOBILE -->
+  <button id="openMenu" class="md:hidden text-2xl focus:outline-none">
+    ☰
+  </button>
+
+  <!-- NAV SOLO EN DESKTOP -->
+  <nav class="hidden items-center md:flex flex-row gap-x-10 opacity-80">
+    <a href={getRelativeLocaleUrl(currentLang, "#top")}
+      >{translateLabels("topbar.home")}</a
+    >
+    <a href={getRelativeLocaleUrl(currentLang, "#experiencie")}
+      >{translateLabels("topbar.experience")}</a
+    >
+    <a href={getRelativeLocaleUrl(currentLang, "#Proyects")}
+      >{translateLabels("topbar.projects")}</a
+    >
+    <a href={getRelativeLocaleUrl(currentLang, "#about")}
+      >{translateLabels("topbar.about")}</a
+    >
+    <a href={getRelativeLocaleUrl(currentLang, "#contactfooter")}
+      >{translateLabels("topbar.contact")}</a
+    >
+    <button class="text-amber-50 hover:text-amber-300 focus:outline-none">
+      <Lang />
+    </button>
+    <!-- se supone que aca va a ir el cambio de idioma -->
+  </nav>
+</header>
+
+<!-- SIDEBAR LATERAL SOLO MOBILE -->
+<div
+  id="mobileSidebar"
+  class="fixed inset-0 z-50 hidden items-center bg-black/60 backdrop-blur-sm md:hidden"
+>
+  <div class="w-64 h-full bg-neutral-900 p-6 text-white">
+    <button id="closeMenu" class="mb-6 text-xl text-right w-full">✕</button>
+    nav class="hidden md:flex flex-row gap-x-10 opacity-80">
+    <a href={getRelativeLocaleUrl(currentLang, "#top")}
+      >{translateLabels("topbar.home")}</a
+    >
+    <a href={getRelativeLocaleUrl(currentLang, "#experiencie")}
+      >{translateLabels("topbar.experiencie")}</a
+    >
+    <a href={getRelativeLocaleUrl(currentLang, "#Proyects")}
+      >{translateLabels("projects.topbar")}</a
+    >
+    <a href={getRelativeLocaleUrl(currentLang, "#about")}
+      >{translateLabels("about.topbar")}</a
+    >
+    <a href={getRelativeLocaleUrl(currentLang, "#contactfooter")}
+      >{translateLabels("contact.topbar")}</a
+    >
+    <button class="text-amber-50 hover:text-amber-300 focus:outline-none">
+      <Lang />
+    </button>
+    <!-- se supone que aca va a ir el cambio de idioma -->
+  </div>
+</div>

@@ -1,0 +1,65 @@
+---
+import "../../styles/global.css";
+import Layout from "../../layouts/MainLayout.astro";
+import Badge from "../../components/badge.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import SocialsItems from "../../components/SocialsItems.astro";
+import Experience from "../../components/Experience.astro";
+import BriefcaseIcon from "../../assets/icon/Briefcase.astro";
+import { useTranslations } from "../../i18n/utils";
+import { languagesList } from "../../i18n/ui";
+
+/* funciones para la traducion de la pagina*/
+
+const currentLang = Astro.currentLocale;
+
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languagesList
+);
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout
+  title="Portfolio Web de Matias  |  Desarrollador Web y Diseño Web ..."
+  description="Matias Damian Delgado + Desarrollador Web y Diseño Web en Buenos Aires, Argentina. Conoce más sobre mi y mi trabajo."
+>
+  <main class="w-fit max-w-screen-xl mx-auto">
+    <SectionContainer class="my-8" id="element">
+      <img
+        src="https://lh3.googleusercontent.com/a/ACg8ocJEbYCjBwIzf0sHv4KIzKYRooko1yJtiqDAJTmGd_uNtqe98w7i=s288-c-no"
+        class="rounded-full size-14 mb-4"
+        alt="my img"
+      />
+      <h1 class="text-white text-3xl font-bold flex flex-row gap-x-4 pb-10">
+        {translateLabels("name.title")}<a
+          href="https://www.linkedin.com/in/matiasdamiandelgado/"
+          class="flex justify-center items-center"
+        >
+          <Badge>{translateLabels("badge.text")}</Badge>
+        </a>
+      </h1>
+      <h2 class="text-white text-xl opacity-80">
+        {translateLabels("presentation.text")}
+        <span class="opacity-80"></span>
+        {translateLabels("presentation.country")}
+        {translateLabels("presentation.study")}
+        <span class="text-blue-100/90">
+          {translateLabels("presentation.degree")}
+        </span>
+      </h2>
+      <SocialsItems />
+    </SectionContainer>
+
+    <SectionContainer id="experiencie">
+      <h2
+        class="text-white text-xl font-semibold mb-6 flex gap-x-2 items-center"
+      >
+        <BriefcaseIcon class="size-7" />
+        {translateLabels("experience.title")}
+      </h2>
+      <Experience />
+    </SectionContainer>
+  </main>
+</Layout>

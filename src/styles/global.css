@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Base styles (mobile first) */
+.element {
+  width: 100%;
+}
+/* Tablet */
+@media screen and (min-width: 640px) {
+  .element {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .element {
+    width: 50%;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .element {
+    width: 33.33%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .element {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .element {
+    width: 20%;
+  }
+}

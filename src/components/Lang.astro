@@ -1,0 +1,24 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const currentLocale = Astro.currentLocale; // idioma actual
+const nextLocale = currentLocale === "es" ? "en" : "es";
+const usLogoUrl = "https://img.icons8.com/skeuomorphism/32/usa-circular.png";
+const esLogoUrl = "https://img.icons8.com/color/48/spain.png";
+---
+
+<a href={getRelativeLocaleUrl(nextLocale)}>
+  {
+    currentLocale === "es" ? (
+      <img
+        src={esLogoUrl}
+        class="rounded-full border border-transparent "
+        width="32"
+        height="32"
+        alt="España"
+      />
+    ) : (
+      <img src={usLogoUrl} width="32" height="30" alt="USA" />
+    )
+  }
+</a>
