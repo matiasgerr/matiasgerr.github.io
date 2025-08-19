@@ -1,4 +1,7 @@
+<!--
 ---
+
+/* funciones para la traducion de la pagina*/
 import "../../styles/global.css";
 import Layout from "../../layouts/MainLayout.astro";
 import Badge from "../../components/badge.astro";
@@ -8,19 +11,17 @@ import { languagesList } from "../../i18n/ui";
 import Experience from "../../components/Experience.astro";
 import SectionContainer from "../../components/SectionContainer.astro";
 import BriefcaseIcon from "../../assets/icon/Briefcase.astro";
-/* funciones para la traducion de la pagina*/
 const currentLang = Astro.currentLocale;
 const translateLabels = useTranslations(
   currentLang as keyof typeof languagesList
 );
 ---
-
+--><!-- BOX 1: Presentación --><!--
 <Layout
   title="Portfolio Web de Matias  |  Desarrollador Web y Diseño Web ..."
   description="Matias Damian Delgado + Desarrollador Web y Diseño Web en Buenos Aires, Argentina. Conoce más sobre mi y mi trabajo."
 >
   <section class="flex flex-row gap-8 p-10 my-7 rounded-2xl">
-    <!-- BOX 1: Presentación -->
     <div
       class="clip-custom w-1/2 flex flex-col items-start p-10 bg-[#59159d93] gap-3 text-white/70"
     >
@@ -53,7 +54,6 @@ const translateLabels = useTranslations(
       <SocialsItems />
     </div>
 
-    <!-- BOX 2: Skills -->
     <div
       class="clip-medium w-1/2 flex flex-col gap-3 bg-[#59159d93] text-pretty text-white"
     >
@@ -85,7 +85,6 @@ const translateLabels = useTranslations(
 
       <div class="w-full text-center h-32 bg-white/20">
         <h2>Mi música 🎶</h2>
-        <!-- <SpotifyTopTracks client:load /> -->
       </div>
     </div>
   </section>
@@ -98,3 +97,4 @@ const translateLabels = useTranslations(
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 13% 53%);
   }
 </style>
+-->
