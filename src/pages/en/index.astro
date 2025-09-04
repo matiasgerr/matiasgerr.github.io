@@ -1,6 +1,4 @@
-<!--
 ---
-
 /* funciones para la traducion de la pagina*/
 import "../../styles/global.css";
 import Layout from "../../layouts/MainLayout.astro";
@@ -16,7 +14,8 @@ const translateLabels = useTranslations(
   currentLang as keyof typeof languagesList
 );
 ---
---><!-- BOX 1: Presentación --><!--
+
+<!-- BOX 1: Presentación -->
 <Layout
   title="Portfolio Web de Matias  |  Desarrollador Web y Diseño Web ..."
   description="Matias Damian Delgado + Desarrollador Web y Diseño Web en Buenos Aires, Argentina. Conoce más sobre mi y mi trabajo."
@@ -82,10 +81,6 @@ const translateLabels = useTranslations(
           </li>
         </ul>
       </div>
-
-      <div class="w-full text-center h-32 bg-white/20">
-        <h2>Mi música 🎶</h2>
-      </div>
     </div>
   </section>
 </Layout>
@@ -97,4 +92,3 @@ const translateLabels = useTranslations(
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 13% 53%);
   }
 </style>
--->
