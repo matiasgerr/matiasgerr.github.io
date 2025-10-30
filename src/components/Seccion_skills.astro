@@ -1,0 +1,65 @@
+---
+import CodeQ from "../assets/icon/CodeQ.astro";
+import Lang_ProgramPill from "../assets/icon/Lang_programpill.astro";
+import Experience from "./Experience.astro";
+---
+
+<script type="module">
+  document.addEventListener("DOMContentLoaded", () => {
+    const fpoint = document.getElementById("fpoint");
+    if (!fpoint) return;
+
+    fpoint.addEventListener("mousemove", (e) => {
+      const rect = fpoint.getBoundingClientRect();
+      const x = Math.round(e.clientX - rect.left);
+      const y = Math.round(e.clientY - rect.top);
+
+      fpoint.style.background = `
+        radial-gradient(circle at ${x}px ${y}px,
+          rgba(255,255,255,0.15) 0px,
+          rgba(255,255,255,0.05) 120px,
+          rgba(0,0,0,0.1) 200px,
+          transparent 300px
+        ),
+        linear-gradient(135deg, #4b1c8a, #59159d)
+      `;
+    });
+
+    fpoint.addEventListener("mouseleave", () => {
+      fpoint.style.background = `
+        linear-gradient(135deg, #4b1c8a, #59159d)
+      `;
+    });
+  });
+</script>
+
+<section id="fpoint" class="flex flex-grid relative">
+  <div
+    class="w-screen z-10 flex flex-wrap items-center justify-center "
+    style="filter: brightness(0.9);"
+  >
+    <Lang_ProgramPill class="w-full flex flex-col items-center">
+      <!-- Bloque título -->
+      <div class="flex flex-col items-center ">
+        <CodeQ class="w-20 mb-2" />
+        <h1 class="text-2xl md:text-3xl font-semibold text-white/80 text-center">
+          MY PROJECTS
+        </h1>
+      </div>
+
+      <!-- Bloque experiencia -->        
+         <Experience />
+      </Lang_ProgramPill>
+  </div>
+</section>
+
+<style>
+  #fpoint {
+    background: linear-gradient(135deg, #4b1c8a, #59159d);
+    transition: background 0.25s ease, filter 0.3s ease;
+  }
+
+  #fpoint:hover {
+    filter: brightness(1);
+  }
+</style>

@@ -27,12 +27,12 @@ const currentLang = Astro.currentLocale;
 
   <body>
     <div
-      class="w-fit md:w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+      class="w-fit relative md:w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
       <div class="w-full max-w-screen-xl mx-auto md:w-full">
         <Header />
       </div>
-      <main class="w-full mx-auto px-4">
+      <main class="w-full mx-auto">
         <slot />
       </main>
       <Footer />

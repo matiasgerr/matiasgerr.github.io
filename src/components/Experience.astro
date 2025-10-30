@@ -1,44 +1,28 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro";
+import { IMAGES, DESCRIPTION, TITLE } from "../utils/ImagesMap";
+import { ButtonCorrousel } from "../js/Button";
 
-const EXPERIENCE = [
-  {
-    date: "aqui va el logo",
-    title:
-      "Developing streaming widgets in React with animations and API integrations for multiple platforms",
-    description:
-      "Make a components Streams in react, with animations and Apis the different plataforms Live streaming.",
-  },
-  {
-    date: "December 2024 - January 2025",
-    title:
-      "Marketing UI Program in Next.js, Tailwind CSS, and MySQL/PHP Database.",
-    description:
-      "Get started with the project, which is a marketing website with a blog, contact form, and a landing page with a subscription form.",
-  },
-  {
-    date: "November 2024 ",
-    title: "Marketing UI Design in Figma.",
-    description:
-      "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
-  },
-  {
-    date: "August 2024",
-    title:
-      "Web Application Development using React, Node.js, Tailwind CSS (some Material-UI components), and Firebase/MySQL/PHP database.",
-    description:
-      "You can obtain information about your virtual cards and view the latest transactions, + a dashboard and landing page, which has annual or monthly analytics with customer base (with Recharts), transfers, and payment methods in the form.",
-    link: "#",
-  },
-];
+function prevSlide(){}
+
+function nextSlide() {}
 ---
 
-<ol class="relative border-s border-gray-200 ml-2.5">
-  {
-    EXPERIENCE.map((experience) => (
-      <li class="mb-10 ms-4">
-        <ExperienceItem {...experience} />
-      </li>
-    ))
-  }
-</ol>
+<section class="grid relative
+grid-cols-2 grid-rows-4 gap-4">
+<div id="Global_div" class="row-span-3">
+  <h2>{TITLE.GlobalBox}</h2>
+  <p>{DESCRIPTION.GlobalBox}</p>
+  
+  <section id="carousel">
+    {
+        IMAGES.GlobalBox.map((img) => (
+          <img class="object-hidden absolute" src={img.src.src} alt={img.alt} />
+        ))
+      }
+        <div>
+        <ButtonCorrousel prevSlide={prevSlide} nextSlide={nextSlide} />
+        </div>
+    </section>
+  </div>
+</section>
+
