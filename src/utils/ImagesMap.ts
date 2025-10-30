@@ -1,11 +1,6 @@
 // src/utils/imagesMap.ts
 
 // Importa tus imágenes locales
-import landin from "../assets/Globals/landing.png";
-import login from "../assets/Globals/loginlogo.png";
-import pay from "../assets/Globals/paypage.png";
-import sponsor from "../assets/copamex/sponsor_coursel.png"
-import YTvideo from "../assets/copamex/YTvideo.png"
 
 export const DESCRIPTION ={
   CopamexBox:
@@ -27,20 +22,20 @@ export const TITLE = {
 
 // Mapeo
 export const IMAGES  = {
-  landing: { src: landin, alt: "Landing Logo" },
-  loginlogo: { src: login, alt: "Login Logo" },
-  paypage: { src: pay, alt: "Pay Logo" },
-  sponsor_coursel: { src: sponsor, alt: "Sponsor img" },
-  YTvideo: { src: YTvideo, alt: "YouTube img" },
+  landing: { src: "../assets/Globals/landing.png", alt: "Landing Logo" },
+  loginlogo: { src: "../assets/Globals/loginlogo.png", alt: "Login Logo" },
+  paypage: { src: "../assets/Globals/paypage.png", alt: "Pay Logo" },
+  sponsor_coursel: { src: "../assets/copamex/sponsor_coursel.png", alt: "Sponsor img" },
+  YTvideo: { src: "../assets/copamex/YTvideo.png", alt: "YouTube img" },
 
   CopamexBox:[
-    { src: sponsor, alt: "Sponsor img" },
-    { src: YTvideo, alt: "YouTube img" }
+    { src: "../assets/copamex/sponsor_coursel.png", alt: "Sponsor img" },
+    { src: "../assets/copamex/YTvideo.png", alt: "YouTube img" }
   ],
 
   GlobalBox:[
-    { src: landin, alt: "Landing Logo" },
-    { src: login, alt: "Login Logo" },
-    { src: pay, alt: "Pay Logo" }
+    { src: "../assets/Globals/landing.png", alt: "Landing Logo" },
+    { src: "../assets/Globals/loginlogo.png", alt: "Login Logo" },
+    { src: "../assets/Globals/paypage.png", alt: "Pay Logo" }
   ],
 };
