@@ -6,7 +6,7 @@ export const CURRENT_YEAR = new Date().getFullYear();
 export const PROJECTS: Project[] = [
   {
     id: '01',
-    title: 'Landing Page Ecomerce',
+    title: 'Landing Page SAAS',
     type: 'web',
     description:
       'Landing page de ecommerce moderna con diseño responsivo, catálogo de productos y flujo de compra integrado.',
