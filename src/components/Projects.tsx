@@ -3,12 +3,14 @@ import { PROJECTS } from '../constants';
 import ProjectCard from './ProjectCard';
 import EjeschoolDrawer from './EjeschoolDrawer';
 import YipiDrawer from './YipiDrawer';
+import GestionGlobalsDrawer from './GestionGlobalsDrawer';
+import YipiWebDrawer from './YipiWebDrawer';
 
 const Projects = () => {
   const [openProjectId, setOpenProjectId] = useState<string | null>(null);
 
   const handleSelect = (id: string) => {
-    if (id === '04' || id === '05') setOpenProjectId((prev) => (prev === id ? null : id));
+    if (id === '01' || id === '03' || id === '04' || id === '02') setOpenProjectId((prev) => (prev === id ? null : id));
   };
 
   return (
@@ -28,8 +30,10 @@ const Projects = () => {
               isOpen={openProjectId === project.id}
               onSelect={handleSelect}
             />
-            {project.id === '04' && <EjeschoolDrawer open={openProjectId === '04'} />}
-            {project.id === '05' && <YipiDrawer open={openProjectId === '05'} />}
+            {project.id === '01' && <GestionGlobalsDrawer open={openProjectId === '01'} />}
+            {project.id === '02' && <YipiWebDrawer open={openProjectId === '02'} />}
+            {project.id === '03' && <EjeschoolDrawer open={openProjectId === '03'} />}
+            {project.id === '04' && <YipiDrawer open={openProjectId === '04'} />}
           </div>
         ))}
       </div>

@@ -6,6 +6,7 @@ export interface Project {
   type: 'web' | 'mobile';
   description: string;
   stack: string[];
+  link?: string;
 }
 
 export interface Social {

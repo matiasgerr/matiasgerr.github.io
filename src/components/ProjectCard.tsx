@@ -10,7 +10,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ project, isOpen = false, onSelect }: ProjectCardProps) => {
   const Icon = project.type === 'web' ? Globe : Smartphone;
   const iconHover = project.type === 'web' ? 'group-hover:text-blue-400' : 'group-hover:text-teal-400';
-  const isExpandable = project.id === '04' || project.id === '05';
+  const isExpandable = project.id === '01'|| project.id === '02' || project.id === '03' || project.id === '04' ;
 
   return (
     <button

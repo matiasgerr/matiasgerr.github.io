@@ -6,41 +6,37 @@ export const CURRENT_YEAR = new Date().getFullYear();
 export const PROJECTS: Project[] = [
   {
     id: '01',
-    title: 'E-commerce Platform',
+    title: 'Landing Page Ecomerce',
     type: 'web',
-    description: 'Panel de administración y tienda en línea con carrito en tiempo real.',
-    stack: ['NextJS', 'Tailwind', 'API REST'],
+    description:
+      'Landing page de ecommerce moderna con diseño responsivo, catálogo de productos y flujo de compra integrado.',
+    stack: ['NextJS', 'Tailwind', 'Vercel', "MUI"],
+    link: 'https://gestion-globals-nexjs-seven.vercel.app/',
   },
   {
     id: '02',
-    title: 'Data Dashboard',
+    title: 'YIPI WEB',
     type: 'web',
     description: 'Visualización de métricas empresariales conectadas a BD relacional.',
     stack: ['React', 'SQL', 'Tailwind'],
   },
   {
     id: '03',
-    title: 'Task Manager',
+    title: 'Yipi Web',
     type: 'web',
-    description: 'App para equipos con asignación de tareas mediante WebSockets.',
-    stack: ['React', 'Node.js', 'SQL'],
+    description:
+      'Versión web de YIPI con las mismas funcionalidades de gestión de locales, consumo, costos y productos, sumando capacidades adicionales propias de la plataforma web.',
+    stack: ['React', 'Tailwind', 'REST'],
   },
   {
     id: '04',
-    title: 'Ejeschool Application',
-    type: 'mobile',
-    description:
-      'Aplicación basada en React Native que ayuda a controlar y gestionar gastos de viajes de tus estudiantes y monitorear el viaje mediante un sistema de Trackeo, además de ofrecer funcionalidades de Notification Push con Expo.',
-    stack: ['React Native', 'Expo', 'Push Notifications'],
-  },
-  {
-    id: '05',
     title: 'YIPI Aplication',
     type: 'mobile',
     description:
       'Aplicación basada en React Native que tiene como objetivo hacer una gestion total de locales a tu cargo mas consumo, costos, productos, servicios aparte de una integracion de plan de pago, etc.',
     stack: ['React Native', 'Tailwind', 'REST'],
   },
+
 ];
 
 export const SOCIALS: Social[] = [
