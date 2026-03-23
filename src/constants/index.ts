@@ -40,9 +40,9 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SOCIALS: Social[] = [
-  { label: 'EMAIL', href: 'mailto:mail@ejemplo.com', icon: Mail },
-  { label: 'GITHUB', href: 'https://github.com', icon: Github },
-  { label: 'LINKEDIN', href: 'https://linkedin.com', icon: Linkedin },
+  { label: 'EMAIL', href: 'mailto:matiasdelgadodjr@gmail.com', icon: Mail },
+  { label: 'GITHUB', href: 'https://github.com/MatiasDelgadoD', icon: Github },
+  { label: 'LINKEDIN', href: 'https://www.linkedin.com/in/matiasdamiandelgado/', icon: Linkedin },
 ];
 
 export const NAV_LINKS: NavLink[] = [
