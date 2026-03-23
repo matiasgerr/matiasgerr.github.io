@@ -12,8 +12,9 @@ const About = () => (
 
       <div className="md:col-span-8 md:col-start-6 space-y-8 text-lg md:text-xl text-slate-400 font-light leading-relaxed">
         <p>
+          Me llamo<strong className='text-blue-400 uppercase'> Matias Delgado </strong>
           Busco brindar soluciones a problemas de empresas, profesionales, clientes, empresarios mediante la programación con un codigo escalable y funcional 
-          <strong className="text-slate-200 font-normal">(FRONT)</strong>Busco fluidez de las
+          <strong className="text-blue-400 font-normal"> Front, </strong>Busco fluidez de las
           interfaces modernas{' '}
           <strong className="text-slate-200 font-normal">(React & React Native)</strong>.
         </p>

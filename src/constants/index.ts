@@ -17,23 +17,31 @@ export const PROJECTS: Project[] = [
     id: '02',
     title: 'YIPI WEB',
     type: 'web',
-    description: 'Visualización de métricas empresariales conectadas a BD relacional.',
-    stack: ['React', 'SQL', 'Tailwind'],
+    description: 'Visualizacion de Geocercas, historial, planes, gestion de vehiculos y gestion de servicios hechos o faltantes para mantener y regularizar servicios pagos o inpagos del vehiculo asi como traking en vivo si es que hay actividad sospechosa del vehiculo',
+    stack: ['React', 'Traccar', 'Tailwind', 'REST'],
   },
   {
     id: '03',
-    title: 'Yipi Web',
+    title: 'Ejeschool Aplication',
     type: 'web',
     description:
-      'Versión web de YIPI con las mismas funcionalidades de gestión de locales, consumo, costos y productos, sumando capacidades adicionales propias de la plataforma web.',
-    stack: ['React', 'Tailwind', 'REST'],
+      'Aplicacion Family view que es para gestionar, tracking y historial en viajes hechos o en vivo mediante suscripciones.',
+    stack: ['React Native', 'Tailwind', 'REST', 'Traccar'],
   },
   {
     id: '04',
-    title: 'YIPI Aplication',
+    title: 'Plania Aplication ',
     type: 'mobile',
     description:
       'Aplicación basada en React Native que tiene como objetivo hacer una gestion total de locales a tu cargo mas consumo, costos, productos, servicios aparte de una integracion de plan de pago, etc.',
+    stack: ['React Native', 'Tailwind', 'REST'],
+  },
+  {
+    id: '05',
+    title: 'YIPI Aplication ',
+    type: 'mobile',
+    description:
+      'Aplicación basada en React Native que tiene como objetivo hacer una gestion total de locales, costos, productos, servicios aparte de una integracion de plan de pago, Teacking de tu vehiculo y estado del mismo, gestion e mantenimientos o servicios y creacion e Geocercas para saber locales e mantenimiento cerca',
     stack: ['React Native', 'Tailwind', 'REST'],
   },
 
@@ -52,7 +60,7 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const SKILLS = [
-  { label: '/ FRONTEND', items: ['React.js', 'Next.js', 'Tailwind CSS'] },
-  { label: '/ MOBILE', items: ['React Native', 'SQLite App'] },
-  { label: '/ BACKEND', items: ['API REST', 'SQL Database', 'Node.js'] },
+  { label: '/ WEB', items: ['React.js', 'Next.js', 'Tailwind CSS'] },
+  { label: '/ MOBILE', items: ['React Native', 'Tailwind CSS'] },
+  { label: '/ BACKEND', items: ['API REST', 'SQL Database', 'Node.js', 'PHP'] },
 ];

@@ -18,7 +18,7 @@ const YipiDrawer = ({ open }: YipiDrawerProps) => (
               / Mobile App
             </span>
             <h3 className="text-2xl md:text-3xl font-bold text-slate-100 mb-4">
-              YIPI Aplication
+              Plania Aplication
             </h3>
             <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
               Aplicación basada en React Native que tiene como objetivo hacer una gestion total de

@@ -17,7 +17,7 @@ const Hero = () => (
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mt-12 border-t border-slate-800 pt-8">
         <p className="font-mono text-slate-500 max-w-md text-sm md:text-base mb-6 md:mb-0">
           Especializado en arquitecturas escalables. Transformando lógicas complejas en interfaces
-          minimalistas usando React, NextJS y React Native.
+          minimalistas. 
         </p>
         <div className="flex gap-4">
           <Terminal className="w-8 h-8 text-slate-700" />
