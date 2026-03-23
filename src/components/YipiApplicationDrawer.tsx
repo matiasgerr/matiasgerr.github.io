@@ -1,4 +1,3 @@
-import { ArrowUpRight } from 'lucide-react';
 import YipiIcon from '../assets/yipi_app.png';
 
 interface GestionGlobalsDrawerProps {
