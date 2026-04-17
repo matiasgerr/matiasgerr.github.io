@@ -44,6 +44,14 @@ export const PROJECTS: Project[] = [
       'Aplicación basada en React Native que tiene como objetivo hacer una gestion total de locales, costos, productos, servicios aparte de una integracion de plan de pago, Teacking de tu vehiculo y estado del mismo, gestion e mantenimientos o servicios y creacion e Geocercas para saber locales e mantenimiento cerca',
     stack: ['React Native', 'Tailwind', 'REST'],
   },
+  {
+    id: '06',
+    title: 'Eje Satelital',
+    type: 'web',
+    description:
+      'Proyecto backend en Java orientado a la gestión de datos críticos en base de datos, con APIs REST y foco en trazabilidad operativa.',
+    stack: ['Java', 'Spring Boot', 'SQL', 'REST'],
+  },
 
 ];
 

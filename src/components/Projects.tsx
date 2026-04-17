@@ -6,12 +6,13 @@ import GestionGlobalsDrawer from './GestionGlobalsDrawer';
 import YipiWebDrawer from './YipiWebDrawer';
 import PlaniaDrawer from './PlaniaDrawer'
 import YipiApplication from './YipiApplicationDrawer'
+import EjeSatelitalDrawer from './EjeSatelitalDrawer';
 
 const Projects = () => {
   const [openProjectId, setOpenProjectId] = useState<string | null>(null);
 
   const handleSelect = (id: string) => {
-    if (id === '01' || id === '03' || id === '04' || id === '02' || id === '05') setOpenProjectId((prev) => (prev === id ? null : id));
+    if (id === '01' || id === '03' || id === '04' || id === '02' || id === '05' || id === '06') setOpenProjectId((prev) => (prev === id ? null : id));
   };
 
   return (
@@ -36,6 +37,7 @@ const Projects = () => {
             {project.id === '03' && <EjeschoolDrawer open={openProjectId === '03'} />}
             {project.id === '04' && <PlaniaDrawer open={openProjectId === '04'} />}
             {project.id === '05' && <YipiApplication open={openProjectId === '05'} />}
+            {project.id === '06' && <EjeSatelitalDrawer open={openProjectId === '06'} />}
           </div>
         ))}
       </div>
