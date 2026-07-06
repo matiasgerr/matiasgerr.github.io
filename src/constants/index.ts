@@ -52,7 +52,22 @@ export const PROJECTS: Project[] = [
       'Proyecto backend en Java orientado a la gestión de datos críticos en base de datos, con APIs REST y foco en trazabilidad operativa.',
     stack: ['Java', 'Spring Boot', 'SQL', 'REST'],
   },
-
+    {
+    id: '07',
+    title: 'Plania V.2',
+    type: 'mobile',
+    description:
+      'Aplicación basada en React Native que tiene como objetivo hacer una gestion total de locales a tu cargo Clientes, servicios aparte de una integracion de Whatsapp automatizado, Notificaciones Push, Woompi, etc.',
+    stack: ['React Native', 'Tailwind', 'REST', 'Meta', 'Woompi', 'Push Notifications'],
+  },
+  {
+    id: '08',
+    title: 'Plania Backend',
+    type: 'web',
+    description:
+      'Proyecto backend en Node.js orientado a la gestión de datos críticos en base de datos, con APIs REST y foco en trazabilidad operativa.',
+    stack: ['Node.js', 'Express', 'SQL', 'REST'],
+  },
 ];
 
 export const SOCIALS: Social[] = [
